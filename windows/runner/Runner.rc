@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "infac" "\0"
+            VALUE "FileDescription", "stockify_pos" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "infac" "\0"
+            VALUE "InternalName", "stockify_pos" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "infac.exe" "\0"
-            VALUE "ProductName", "infac" "\0"
+            VALUE "OriginalFilename", "stockify_pos.exe" "\0"
+            VALUE "ProductName", "stockify_pos" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

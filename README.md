@@ -1,4 +1,4 @@
-# infac
+# stockify_pos
 
 A new Flutter project.
 
