@@ -2,9 +2,11 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
+import 'package:stockify_pos/database/db.dart';
 
 void main() async {
   await dotenv.load(fileName: ".env");
+  dataBase();
   runApp(MyApp());
 }
 
@@ -148,11 +150,10 @@ class FavoritesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     var appState = context.watch<MyAppState>();
-    final username = dotenv.env["USERNAME"];
 
     if (appState.favorites.isEmpty) {
       return Center(
-        child: Text(username.toString()),
+        child: Text("No favorites yet"),
       );
     }
 
@@ -285,7 +286,7 @@ class BigCard extends StatelessWidget {
 }
 
 class HistoryListView extends StatefulWidget {
-  const HistoryListView({Key? key}) : super(key: key);
+  const HistoryListView({super.key});
 
   @override
   State<HistoryListView> createState() => _HistoryListViewState();
