@@ -6,7 +6,6 @@ import 'package:stockify_pos/database/db.dart';
 
 void main() async {
   await dotenv.load(fileName: ".env");
-  dataBase();
   runApp(MyApp());
 }
 
@@ -150,6 +149,7 @@ class FavoritesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     var appState = context.watch<MyAppState>();
+    dataBase();
 
     if (appState.favorites.isEmpty) {
       return Center(
